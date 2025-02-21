@@ -48,12 +48,12 @@ void PID::UpdateError(double cte) {
       // the simulated delta time from Carla is valid since it is bigger than zero
       // time shift on k and do [k]-[k-1], ideally, it 
       // should be [k+1]-[k] which is not feasible
-      d_error = (cte - p_err)/dt;
+      d_err = (cte - p_err)/dt;
    }
    else
    {
       // else, there was no valid delta time
-      d_error = 0.0;
+      d_err = 0.0;
    }
 
    // Proportinal error calculation
