@@ -226,9 +226,9 @@ int main ()
   **/
 
   PID pid_steer = PID();
-  double steer_kp = 1.0;
-  double steer_ki = 0.01;
-  double steer_kd = 0.1;
+  double steer_kp = 4.0;
+  double steer_ki = 0.5;
+  double steer_kd = 0.8;
   double steer_out_max = 0.5236;    // 0.5236 rad = 30 degrees (30/180*pi)
   double steer_out_min = -0.5236;   // 0.5236 rad = 30 degrees (30/180*pi)
   pid_steer.Init(steer_kp, steer_ki, steer_kd, steer_out_max, steer_out_min);
