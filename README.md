@@ -1,3 +1,66 @@
+# Running my tests:
+
+Log in using the labuser (vocareum); user ubuntu crashes due to some missing uWS.h dependencies.
+
+Open terminal and download the repo:
+```bash
+git clone https://github.com/marcelocsi/nd013-c6-control-starter.git
+```
+
+Install the required python libraries before running the code. Do this once.
+```bash
+# Install python requirements
+pip install pandas matplotlib numpy pygame websocket-client
+```
+
+
+after download, test wether the Carla engine is installed correctly:
+```bash
+/opt/carla-simulator/CarlaUE4.sh
+```
+it shall open a blank screen of the Carla simulator, few minutes later, a screen with city shall show up.
+If the window size is too large, decrease it by issuing:
+```bash
+/opt/carla-simulator/CarlaUE4.sh -windowed -ResX=640 -ResY=480
+```
+
+Open another windows in the same terminal to build dependencies for the project:
+```bash
+./install-ubuntu.sh 
+```
+
+Once the installation is over, run these commands to update the required rpc library:
+```bash
+cd pid_controller/
+rm -rf rpclib
+git clone https://github.com/rpclib/rpclib.git
+```
+
+Build the dependencies list and make
+```bash
+cmake .
+make
+```
+
+```bash
+```
+
+```bash
+```
+
+```bash
+```
+
+```bash
+```
+
+```bash
+```
+
+
+
+
+
 # Control and Trajectory Tracking for Autonomous Vehicle
 
 In this project, you will apply the skills you have acquired in this course to design a Proportional-Integral-Derivative (PID) controller to perform vehicle trajectory tracking. Given a trajectory as an array of locations, and a simulation environment, you will design and code a PID controller and test its efficiency on the CARLA simulator used in the industry.
