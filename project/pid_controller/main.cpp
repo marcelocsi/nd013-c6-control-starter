@@ -233,8 +233,8 @@ int main ()
   double steer_out_min = -0.5236;   // 0.5236 rad = 30 degrees (30/180*pi)
   pid_steer.Init(steer_kp, steer_ki, steer_kd, steer_out_max, steer_out_min);
 
-  double throtlle_kp = 0.01;
-  double throtlle_ki = 0.00001;
+  double throtlle_kp = 0.2;
+  double throtlle_ki = 0.000;
   double throtlle_kd = 0.02;
   double throtlle_out_max = 1.0;    // 1.0 = 100%
   double throtlle_out_min = 0.0;   // -1.0 = -100%
