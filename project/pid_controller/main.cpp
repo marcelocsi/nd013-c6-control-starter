@@ -237,7 +237,7 @@ int main ()
   double throtlle_ki = 0.000;
   double throtlle_kd = 0.02;
   double throtlle_out_max = 1.0;    // 1.0 = 100%
-  double throtlle_out_min = 0.0;   // -1.0 = -100%
+  double throtlle_out_min = -1.0;   // -1.0 = -100%
   PID pid_throttle = PID();
   pid_throttle.Init(throtlle_kp, throtlle_ki, throtlle_kd, throtlle_out_max, throtlle_out_min);
 
