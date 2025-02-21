@@ -53,7 +53,7 @@ void PID::UpdateError(double cte) {
    else
    {
       // else, there was no valid delta time
-      d_error = 0.0
+      d_error = 0.0;
    }
 
    // Proportinal error calculation
