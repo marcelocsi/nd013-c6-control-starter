@@ -58,7 +58,7 @@ void PID::UpdateError(double cte) {
 
    // Proportinal error calculation
    // update the proportional after the derivative term to have the k and k-1 errors
-   p_err = cte
+   p_err = cte;
 }
 
 double PID::TotalError() {
