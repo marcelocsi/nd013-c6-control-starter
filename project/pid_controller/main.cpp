@@ -226,7 +226,7 @@ int main ()
   **/
 
   PID pid_steer = PID();
-  double steer_kp = 1.0;
+  double steer_kp = 0.7;
   double steer_ki = 0.05;
   double steer_kd = 0.0;
   double steer_out_max = 0.5236/2.0;    // 0.5236 rad = 30 degrees (30/180*pi)
@@ -237,7 +237,7 @@ int main ()
   double throtlle_ki = 0.000;
   double throtlle_kd = 0.02;
   double throtlle_out_max = 1.0;    // 1.0 = 100%
-  double throtlle_out_min = -1.0;   // -1.0 = -100%
+  double throtlle_out_min = 0.0;   // -1.0 = -100%
   PID pid_throttle = PID();
   pid_throttle.Init(throtlle_kp, throtlle_ki, throtlle_kd, throtlle_out_max, throtlle_out_min);
 
