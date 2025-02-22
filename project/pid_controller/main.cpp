@@ -313,6 +313,18 @@ int main ()
           /**
           * TODO (step 3): compute the steer error (error_steer) from the position and the desired trajectory
           **/
+          double x_k;
+          double y_k;
+
+          double x_k1;
+          double y_k1;
+
+          x_k = x_points[x_points.size()-1];
+          x_k1 = x_position;
+
+          y_k = y_points[y_points.size()-1];
+          y_k1 = y_position;
+
           error_steer = angle_between_points(x_position, y_position, x_points[x_points.size()-1], y_points[y_points.size()-1]) - yaw;
           
           /**
@@ -330,7 +342,12 @@ int main ()
 
           file_steer  << i ;
           file_steer  << " " << error_steer;
-          file_steer  << " " << steer_output << endl;
+          file_steer  << " " << steer_output;
+          file_steer  << " " << x_k;
+          file_steer  << " " << y_k;
+          file_steer  << " " << x_k1;
+          file_steer  << " " << y_k1;
+          file_steer  << " " << yaw << endl;
 
 
 

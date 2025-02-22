@@ -3,9 +3,18 @@ import matplotlib.pyplot as plt
 
 def read_steer_data():
     steer_file = 'steer_pid_data.txt'
-    steer_df = pd.read_csv(steer_file, delim_whitespace = True, header = None, usecols = [0, 1, 2])
-    steer_df.columns = ['Iteration', 'Error Steering', 'Steering Output']
-    print(f"Steer data:\n{steer_df.head()}\n")
+    steer_df = pd.read_csv(steer_file, delim_whitespace = True, header = None)
+    steer_df.columns = [
+        'Iteration',
+        'Error Steering',
+        'Steering Output',
+        'x[k]',
+        'y[k]',
+        'x[k-1]',
+        'y[k-1]',
+        'yaw'       
+        ]
+    print(f'Steer data:\n{steer_df.head()}\n')
     return steer_df
 
 
