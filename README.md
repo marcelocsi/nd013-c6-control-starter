@@ -26,6 +26,7 @@ If the window size is too large, decrease it by issuing:
 
 Open another windows in the same terminal to build dependencies for the project:
 ```bash
+cd ~/nd013-c6-control-starter/project
 ./install-ubuntu.sh 
 ```
 
@@ -39,7 +40,6 @@ git clone https://github.com/rpclib/rpclib.git
 Build the dependencies list and make
 ```bash
 cmake .
-make
 ```
 
 ```bash
