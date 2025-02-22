@@ -43,9 +43,11 @@ make
 ```
 
 ```bash
+clear && git pull && cd pid_controller/ && make && cd.. && ./run_main_pid.sh
 ```
 
 ```bash
+python3 plot_pid.py
 ```
 
 ```bash

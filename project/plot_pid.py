@@ -5,14 +5,14 @@ def read_steer_data():
     steer_file = 'steer_pid_data.txt'
     steer_df = pd.read_csv(steer_file, delim_whitespace = True, header = None)
     steer_df.columns = [
-        'Iteration',
-        'Error Steering',
-        'Steering Output',
-        'x[k]',
-        'y[k]',
-        'x[k-1]',
-        'y[k-1]',
-        'yaw'       
+        'Iteration',            # 0
+        'Error Steering',       # 1
+        'Steering Output',      # 2
+        'x[k]',                 # 3
+        'y[k]',                 # 4
+        'x[k-1]',               # 5
+        'y[k-1]',               # 6
+        'yaw'                   # 7
         ]
     print(f'Steer data:\n{steer_df.head()}\n')
     return steer_df
@@ -29,6 +29,16 @@ def read_throttle_data():
 def plot_steer_data(steer_df, n_rows):   
     steer_df2 = steer_df[:n_rows]
     steer_df2.plot(x = steer_df.columns[0], y = [steer_df.columns[1], steer_df.columns[2]], kind = 'line')
+    
+    plt.figure()
+    steer_df2.plot(x = steer_df.columns[0], y = [
+                                                    steer_df.columns[3],
+                                                    steer_df.columns[4],
+                                                    steer_df.columns[5],
+                                                    steer_df.columns[6],
+                                                    steer_df.columns[7],
+                                                ],
+                    kind = 'line')
     plt.show()
  
     
